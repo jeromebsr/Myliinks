@@ -1,0 +1,14 @@
+body {
+	/*background-color: #222527;*/
+	background-color: #171933;
+	color: #fff;
+}
+.bg-cutom-card {
+	/*background-color: #3c3f41;*/
+	background-color: #21244D;
+}
+
+.copied {
+	color: green;
+	display: none;
+}

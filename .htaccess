@@ -1,0 +1,5 @@
+RewriteEngine on
+RewriteRule ^(wp|wp-admin|Public/Admin/Ressources/php/create-checkout-session.php)($|/) - [L]
+RewriteBase /
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*)$ index.php?url=$1 [QSA,L]

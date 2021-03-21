@@ -1,0 +1,30 @@
+{
+    "name": "jerome/links",
+    "authors": [
+        {
+            "name": "jeromebsr",
+            "email": "jerome.bsrpro@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "App\\": "App"
+        }
+    },
+    "require-dev": {
+        "symfony/var-dumper": "^5.2"
+    },
+    "require": {
+        "stripe/stripe-php": "^7.75",
+        "slim/slim": "^3.12",
+        "vlucas/phpdotenv": "^3.4",
+        "monolog/monolog": "^1.17",
+		"ext-json": "*",
+		"ext-pdo": "*",
+        "phpmailer/phpmailer":  "^6.3",
+        "bacon/bacon-qr-code": "^2.0",
+        "chillerlan/php-qrcode": "^3.4",
+		"ext-http": "*",
+		"ext-curl": "*"
+	}
+}

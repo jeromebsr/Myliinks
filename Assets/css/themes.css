@@ -1,0 +1,70 @@
+.btn-pink {
+	background-color: #EEA1AD;
+	color: #ffffff;
+}
+
+.btn-pink:hover {
+	background-color: #b67480;
+}
+
+.btn-monochrome {
+	background-color: #fff;
+	border: 1px solid #000;
+}
+
+.btn-monochrome:hover {
+	background-color: #000;
+	color: #fff !important;
+}
+
+.btn-grey {
+	background-color: #7F7F7F;
+	color: #FFF;
+}
+
+.btn-grey:hover {
+	background-color: #333;
+	color: #7F7F7F;
+}
+
+.btn-beach {
+	background-color: darkorange;
+	color: #fff;
+}
+
+.btn-beach:hover {
+	background-color: cyan;
+	color: darkorange;
+}
+
+.btn-moutain {
+	 background-color: #0c5460;
+	 color: #fff;
+ }
+
+.btn-moutain:hover {
+	background-color: #0b313c;
+	color: #fff;
+}
+.btn-wave {
+	background-color: #56acbe;
+	color: #fff;
+}
+.btn-wave:hover {
+	background-color: #447587;
+	color: #fff;
+}
+
+/* Fomre boutons */
+
+.btn-squared {
+	border-radius: 0 !important;
+}
+
+.btn-rounded {
+	border-radius: .25rem !important;
+}
+
+.btn-circle {
+	border-radius: 1.25rem !important;
+}

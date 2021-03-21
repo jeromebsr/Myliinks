@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="a877da01-6bec-48bf-b2bb-5fddecb7b1f3" name="MyLiinks" url="http://access786542162.webspace-data.io">
+        <fileTransfer host="access786542162.webspace-data.io" port="22" rootFolder="/Myliinks" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

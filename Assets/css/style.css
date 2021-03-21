@@ -1,0 +1,404 @@
+/* Flash Notification */
+
+.flash {
+	display: block;
+	position: fixed;
+	top: 25px;
+	right: 25px;
+	width: 350px;
+	padding: 20px 25px 20px 85px;
+	font-size: 16px;
+	font-weight: 400;
+	color: #66847C;
+	background-color: #FFF;
+	border: 2px solid #66847C;
+	border-radius: 2px;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
+	opacity: 0;
+	z-index: 9999999;
+}
+
+.flash__icon {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	width: 1.8em;
+	height: 100%;
+	padding: 0 0.4em;
+	background-color: #66847C;
+	color: #FFF;
+	font-size: 36px;
+	font-weight: 300;
+	transform: translate(0, -50%);
+}
+.flash__icon .icon {
+	position: absolute;
+	top: 50%;
+	transform: translate(0, -50%);
+}
+
+@-webkit-keyframes drop-in-fade-out {
+	0% {
+		opacity: 0;
+		visibility: visible;
+		-webkit-transform: translate3d(0, -200%, 0);
+		-moz-transform: translate3d(0, -200%, 0);
+		-ms-transform: translate3d(0, -200%, 0);
+		-o-transform: translate3d(0, -200%, 0);
+		transform: translate3d(0, -200%, 0);
+	}
+	12% {
+		-webkit-transform: translate3d(0, 0, 0);
+		-moz-transform: translate3d(0, 0, 0);
+		-ms-transform: translate3d(0, 0, 0);
+		-o-transform: translate3d(0, 0, 0);
+		transform: translate3d(0, 0, 0);
+	}
+	20% {
+		opacity: 1;
+	}
+	70% {
+		opacity: 1;
+		visibility: visible;
+		-webkit-transform: translate3d(0, 0, 0);
+		-moz-transform: translate3d(0, 0, 0);
+		-ms-transform: translate3d(0, 0, 0);
+		-o-transform: translate3d(0, 0, 0);
+		transform: translate3d(0, 0, 0);
+	}
+	80% {
+		opacity: 0;
+	}
+	100% {
+		visibility: hidden;
+		-webkit-transform: translate3d(75%, 0, 0);
+		-moz-transform: translate3d(75%, 0, 0);
+		-ms-transform: translate3d(75%, 0, 0);
+		-o-transform: translate3d(75%, 0, 0);
+		transform: translate3d(25%, 0, 0);
+	}
+}
+@-moz-keyframes drop-in-fade-out {
+	0% {
+		opacity: 0;
+		visibility: visible;
+		-webkit-transform: translate3d(0, -200%, 0);
+		-moz-transform: translate3d(0, -200%, 0);
+		-ms-transform: translate3d(0, -200%, 0);
+		-o-transform: translate3d(0, -200%, 0);
+		transform: translate3d(0, -200%, 0);
+	}
+	12% {
+		-webkit-transform: translate3d(0, 0, 0);
+		-moz-transform: translate3d(0, 0, 0);
+		-ms-transform: translate3d(0, 0, 0);
+		-o-transform: translate3d(0, 0, 0);
+		transform: translate3d(0, 0, 0);
+	}
+	20% {
+		opacity: 1;
+	}
+	70% {
+		opacity: 1;
+		visibility: visible;
+		-webkit-transform: translate3d(0, 0, 0);
+		-moz-transform: translate3d(0, 0, 0);
+		-ms-transform: translate3d(0, 0, 0);
+		-o-transform: translate3d(0, 0, 0);
+		transform: translate3d(0, 0, 0);
+	}
+	80% {
+		opacity: 0;
+	}
+	100% {
+		visibility: hidden;
+		-webkit-transform: translate3d(75%, 0, 0);
+		-moz-transform: translate3d(75%, 0, 0);
+		-ms-transform: translate3d(75%, 0, 0);
+		-o-transform: translate3d(75%, 0, 0);
+		transform: translate3d(25%, 0, 0);
+	}
+}
+@-o-keyframes drop-in-fade-out {
+	0% {
+		opacity: 0;
+		visibility: visible;
+		-webkit-transform: translate3d(0, -200%, 0);
+		-moz-transform: translate3d(0, -200%, 0);
+		-ms-transform: translate3d(0, -200%, 0);
+		-o-transform: translate3d(0, -200%, 0);
+		transform: translate3d(0, -200%, 0);
+	}
+	12% {
+		-webkit-transform: translate3d(0, 0, 0);
+		-moz-transform: translate3d(0, 0, 0);
+		-ms-transform: translate3d(0, 0, 0);
+		-o-transform: translate3d(0, 0, 0);
+		transform: translate3d(0, 0, 0);
+	}
+	20% {
+		opacity: 1;
+	}
+	70% {
+		opacity: 1;
+		visibility: visible;
+		-webkit-transform: translate3d(0, 0, 0);
+		-moz-transform: translate3d(0, 0, 0);
+		-ms-transform: translate3d(0, 0, 0);
+		-o-transform: translate3d(0, 0, 0);
+		transform: translate3d(0, 0, 0);
+	}
+	80% {
+		opacity: 0;
+	}
+	100% {
+		visibility: hidden;
+		-webkit-transform: translate3d(75%, 0, 0);
+		-moz-transform: translate3d(75%, 0, 0);
+		-ms-transform: translate3d(75%, 0, 0);
+		-o-transform: translate3d(75%, 0, 0);
+		transform: translate3d(25%, 0, 0);
+	}
+}
+@keyframes drop-in-fade-out {
+	0% {
+		opacity: 0;
+		visibility: visible;
+		-webkit-transform: translate3d(0, -200%, 0);
+		-moz-transform: translate3d(0, -200%, 0);
+		-ms-transform: translate3d(0, -200%, 0);
+		-o-transform: translate3d(0, -200%, 0);
+		transform: translate3d(0, -200%, 0);
+	}
+	12% {
+		-webkit-transform: translate3d(0, 0, 0);
+		-moz-transform: translate3d(0, 0, 0);
+		-ms-transform: translate3d(0, 0, 0);
+		-o-transform: translate3d(0, 0, 0);
+		transform: translate3d(0, 0, 0);
+	}
+	20% {
+		opacity: 1;
+	}
+	70% {
+		opacity: 1;
+		visibility: visible;
+		-webkit-transform: translate3d(0, 0, 0);
+		-moz-transform: translate3d(0, 0, 0);
+		-ms-transform: translate3d(0, 0, 0);
+		-o-transform: translate3d(0, 0, 0);
+		transform: translate3d(0, 0, 0);
+	}
+	80% {
+		opacity: 0;
+	}
+	100% {
+		visibility: hidden;
+		-webkit-transform: translate3d(75%, 0, 0);
+		-moz-transform: translate3d(75%, 0, 0);
+		-ms-transform: translate3d(75%, 0, 0);
+		-o-transform: translate3d(75%, 0, 0);
+		transform: translate3d(25%, 0, 0);
+	}
+}
+.animate--drop-in-fade-out {
+	-webkit-animation: drop-in-fade-out 3.5s 0.4s cubic-bezier(.32,1.75,.65,.91);
+	-moz-animation: drop-in-fade-out 3.5s 0.4s cubic-bezier(.32,1.75,.65,.91);
+	-ms-animation: drop-in-fade-out 3.5s 0.4s cubic-bezier(.32,1.75,.65,.91);
+	-o-animation: drop-in-fade-out 3.5s 0.4s cubic-bezier(.32,1.75,.65,.91);
+	animation: drop-in-fade-out 3.5s 0.4s cubic-bezier(.32,1.75,.65,.91);
+}
+
+.flash-success {
+	color: #155724 !important;
+	border: 2px solid #c3e6cb !important;
+}
+.flash-success .flash__icon
+{
+	background-color: #d4edda !important;
+}
+
+.flash-danger  {
+	color: #721c24 !important;
+	border: 2px solid #f5c6cb !important;
+}
+.flash-danger .flash__icon
+{
+	background-color: #f8d7da !important;
+}
+
+.flash-warning {
+	color: #856404 !important;
+	border: 2px solid #ffeeba !important;
+}
+.flash-warning .flash__icon
+{
+	background-color: #fff3cd !important;
+}
+
+.flash-info {
+	color: #0c5460 !important;
+	border: 2px solid #bee5eb !important;
+}
+.flash-info .flash__icon
+{
+	background-color: #d1ecf1 !important;
+}
+
+/* Icon Eye Password */
+
+.field-icon {
+	float: right;
+	margin-left: -500px;
+	margin-right: 30px;
+	margin-top: -43px;
+	position: relative;
+	z-index: 2;
+}
+
+/* Icon Check Input Form Register */
+.field-icon-check {
+	float: left;
+	margin-left: -30px;
+	margin-right: 30px;
+	margin-top: -43px;
+	position: relative;
+	z-index: 2;
+	color: #198754;
+	font-size: 20px;
+}
+
+/* The message box is shown when the user clicks on the password field */
+#message {
+	display:none;
+	background: #f1f1f1;
+	color: #000;
+	position: relative;
+	padding: 20px;
+	margin-top: 10px;
+}
+
+#message p {
+	padding: 10px 35px;
+	font-size: 18px;
+}
+
+/* Add a green text color and a checkmark when the requirements are right */
+.valid {
+	color: green;
+}
+
+.valid:before {
+	position: relative;
+	left: -35px;
+}
+
+/* Add a red text color and an "x" icon when the requirements are wrong */
+.invalid {
+	color: red;
+}
+
+.invalid:before {
+	position: relative;
+	left: -35px;
+}
+.display-none {
+	display: none;
+}
+
+.btn, input[type=checkbox] {
+	cursor: pointer !important;
+}
+
+input[type=checkbox] {
+	background-color: #BBC2CA;
+	width: 40px !important;
+	height: 25px;
+}
+
+input[type=checkbox]:checked {
+	background-color: #198754;
+	border-color: #198754;
+}
+
+input[type=radio]:checked {
+	background-color: #198754;
+	border-color: #198754;
+}
+
+.btn-purple {
+	background-color: #9147FF;
+	color: #fff;
+}
+
+.btn-purple:hover {
+	background-color: #762CE8;
+	color: #fff;
+}
+
+/* Cards links mobile */
+@media (max-device-width: 576px)
+{
+	.card {
+		max-width: none !important;
+		text-align: center;
+	}
+
+	.form-switch .form-check-input {
+		margin-left: 6.5rem;
+	}
+
+	.fixe-mobile{
+		z-index: 99999999999;
+		position: fixed;
+		bottom: 0;
+		right: 0;
+		width: 100%;
+	}
+	.btn-save-mobile {
+		width: 100%;
+		height: 60px;
+		font-weight: bold;
+		border-radius: unset;
+	}
+
+	.padding-mobile-fixed {
+		padding-bottom: 100px !important;
+	}
+}
+.text-menu
+{
+	color:#EFEFF1 !important;
+}
+
+.text-menu:hover
+{
+	color: #A970FF !important;
+}
+
+.nav-link, .navbar-expand-lg
+{
+	background-color: #21244D !important;
+}
+
+@media (min-device-width: 576px)
+{
+	.navbar-expand-lg
+	{
+		box-shadow: 0px 2px 10px #101224;
+		height: 50px;
+		padding-top: 30px;
+		padding-bottom: 30px;
+	}
+
+	.nav-link, .navbar-expand-lg
+	{
+		font-size: 18px;
+		font-weight: 600;
+	}
+}
+
+.modal-content {
+	background-color: #212529 !important;
+	color: #fff !important;
+}

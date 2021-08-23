@@ -47,6 +47,8 @@ session_start();
 			$router->post('/admin', function(){ include 'Public/Admin/index.php'; });
 			$router->post('/admin/reorder', function() use($link) { $link->reorderLinks(); });
 			$router->get('/admin/settings', function(){ include 'Public/Admin/settings.php'; });
+			$router->get('/admin/asktrustbadge', function(){ include 'Public/Admin/Ressources/php/trustebadge.php'; });
+			$router->post('/admin/asktrustbadge', function(){ include 'Public/Admin/Ressources/php/trustebadge.php'; });
 			$router->post('/create-customer-portal-session', function() {
 				\Stripe\Stripe::setApiKey('sk_test_s84ulO6WuXfGl1M8gDGNFIF800G4OhThSy');
 

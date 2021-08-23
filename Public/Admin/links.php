@@ -95,8 +95,8 @@ $qrcode->render($data);
 					<div class="mb-1">
 					<img class="thumbnail" width="12" style="margin-left: -12px;" src="Assets/img/brands/'.$v['thumbnail'].'" alt="'.$v['link_name'].'">
 						<label for="'.$v['link_name'].'" class="form-label">"'.$v['link_name'].'"</label>
-						<input type="number" name="order_link" class="form-control" value="'.$v['order_link'].'">
-						<input type="hidden" name="link_id" class="form-control" value="'.$v['id'].'">
+						<input type="number" name="order_link[]" class="form-control" value="'.$v['order_link'].'">
+						<input type="hidden" name="link_id[]" class="form-control" value="'.$v['id'].'">
 					</div>
 				</div>
 			</div>';

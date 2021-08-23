@@ -189,7 +189,10 @@
       <workItem from="1614934976967" duration="1000" />
       <workItem from="1615105820615" duration="49210000" />
       <workItem from="1615542209577" duration="47775000" />
-      <workItem from="1616313890870" duration="808000" />
+      <workItem from="1616313890870" duration="5942000" />
+      <workItem from="1616679754190" duration="713000" />
+      <workItem from="1616681376286" duration="13387000" />
+      <workItem from="1627849757191" duration="13000" />
     </task>
     <servers />
   </component>
@@ -298,12 +301,12 @@
     <state x="750" y="342" key="NewPhpClassDialog/-1920.178.1920.1055/0.25.1920.994/-3600.55.1680.1025@0.25.1920.994" timestamp="1612014098414" />
     <state x="750" y="342" key="NewPhpClassDialog/-1920.178.1920.1055/0.25.1920.995/-3600.55.1680.1025@0.25.1920.995" timestamp="1611594471352" />
     <state x="750" y="343" key="NewPhpClassDialog/-1920.178.1920.1055/0.25.1920.996/-3600.55.1680.1025@0.25.1920.996" timestamp="1614676728634" />
-    <state x="781" y="450" key="NewPhpFileDialog" timestamp="1615373752323">
-      <screen x="0" y="25" width="1920" height="998" />
+    <state x="781" y="449" key="NewPhpFileDialog" timestamp="1616693141065">
+      <screen x="0" y="25" width="1920" height="995" />
     </state>
     <state x="781" y="474" key="NewPhpFileDialog/-1920.178.1920.1055/0.25.1920.1055/-3600.55.1680.1025@0.25.1920.1055" timestamp="1612002918297" />
     <state x="781" y="449" key="NewPhpFileDialog/-1920.178.1920.1055/0.25.1920.994/-3600.55.1680.1025@0.25.1920.994" timestamp="1611224376721" />
-    <state x="781" y="449" key="NewPhpFileDialog/-1920.178.1920.1055/0.25.1920.995/-3600.55.1680.1025@0.25.1920.995" timestamp="1615112272782" />
+    <state x="781" y="449" key="NewPhpFileDialog/-1920.178.1920.1055/0.25.1920.995/-3600.55.1680.1025@0.25.1920.995" timestamp="1616693141065" />
     <state x="781" y="449" key="NewPhpFileDialog/-1920.178.1920.1055/0.25.1920.996/-3600.55.1680.1025@0.25.1920.996" timestamp="1612527767467" />
     <state x="781" y="450" key="NewPhpFileDialog/-1920.178.1920.1055/0.25.1920.997/-3600.55.1680.1025@0.25.1920.997" timestamp="1615286634923" />
     <state x="781" y="450" key="NewPhpFileDialog/-1920.178.1920.1055/0.25.1920.998/-3600.55.1680.1025@0.25.1920.998" timestamp="1615373752323" />
@@ -345,5 +348,20 @@
       <screen x="0" y="25" width="1920" height="996" />
     </state>
     <state x="625" y="244" width="670" height="676" key="search.everywhere.popup/-1920.178.1920.1055/0.25.1920.996/-3600.55.1680.1025@0.25.1920.996" timestamp="1612892671939" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php-line-method">
+          <url>file://$PROJECT_DIR$/App/User.php</url>
+          <line>40</line>
+          <properties>
+            <option name="className" value="\App\User" />
+            <option name="methodName" value="getUsername" />
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

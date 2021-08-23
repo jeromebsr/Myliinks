@@ -248,17 +248,22 @@ class LinksController
 				id_user = :id_user	
 		');
 
-			dump($_POST);
+		foreach($_POST['order_link'] as $k_ol => $order_link)
+		{
+			$query->bindValue(':order_link', $order_link);
+			dump('Order Link : ' .$order_link);
+		}
 
-			$query->bindValue(':order_link', $_POST['order_link']);
-			dump('Order Link : ' .$_POST['order_link']);
-
-			$query->bindValue(':link_id', $_POST['id_link']);
-			dump('Link ID : ' .$_POST['link_id']);
+		foreach($_POST['link_id'] as $k_li => $link_id)
+		{
+			$query->bindValue(':link_id', $link_id);
+			dump('Link ID : ' .$link_id);
 
 			$query->bindValue(':id_user', $_SESSION['user']['id']);
-			die();
-			$query->execute();
+		}
+		$query->execute();
+
+		//die();
 
 		header('Location: /admin');
 	}

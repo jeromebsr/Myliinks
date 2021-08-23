@@ -299,6 +299,24 @@ class UserController extends User
 	}
 
 	/**
+	 * @return array
+	 * Renvoie les infos de l'utilisateur via son ID (SESSION)
+	 */
+	public function loadUserById()
+	{
+		$query = $this->db->prepare('
+			SELECT *
+			FROM users
+			WHERE id = :id
+		');
+		$query->bindValue(':id', $_SESSION['user']['id']);
+		$query->execute();
+
+		$tab = $query->fetchAll(PDO::FETCH_ASSOC);
+		return $tab;
+	}
+
+	/**
 	 * @param $profil
 	 * @return mixed
 	 * Vérifie si le profil demandé existe bien
@@ -492,6 +510,27 @@ class UserController extends User
 		$tab = $query->fetch(PDO::FETCH_ASSOC);
 
 		return $tab['total_views'];
+	}
+
+	public function sendVerificationRequest()
+	{
+		die('coucou');
+		$mailer = new Mailer();
+		$mailer->sendMail('verif@myliinks.com', 'jerome.bsrpro@gmail.com', 'Demande de vérification de compte (Trustbadge)', null, '
+			<h1>Demande de vérifcation de compte :</h1>
+			<p>
+				Utilisateur : '.$_POST['username'].' <br />
+				Nom complet : '.$_POST['full_name'].' <br />
+				Connu comme : '.$_POST['known_as'].' <br />
+				Catégorie : '.$_POST['category'].' <br />
+			</p>
+			<p>
+				Cette demande provient du compte : '.$_SESSION['user']['username'].', avec l\'id : '.$_SESSION['user']['id'].'
+			</p>
+		', $_POST['id_doc']);
+		dump($_FILES);
+
+		//header('Location: /admin/settings');
 	}
 
 	/**
